@@ -3,6 +3,7 @@
 #DEP bypass with PUSHAD method 
 # 3 Non ASLR application modules (BASS.dll) (BASSWMA.dll) (bassmidi)
 #shellcode is cmd.exe shellcode
+#Since all ROP gadgets are in 3 Non ASLR application modules, this will also bypass ASLR.
 
 import struct
 import sys
