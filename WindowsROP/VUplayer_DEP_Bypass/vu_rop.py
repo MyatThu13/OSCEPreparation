@@ -10,7 +10,7 @@ import os
 
 crash_file = "vp_dep.m3u"
 
-
+#For VirtualProtect function
 # GOALS
 # EAX 90909090 => Nop                                                
 # ECX <writeable pointer> => lpflOldProtect                                 
