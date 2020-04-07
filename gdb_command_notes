@@ -33,6 +33,9 @@ end
 #list defined variables 
 (gdb) info variables
 
+#list defined functions
+(gdb) info functions
+
 
 #display command to set up register values after hitting the breakpoint everytime 
 (gdb) display/x $edx 
