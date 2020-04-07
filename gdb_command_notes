@@ -9,3 +9,21 @@
 
 #Process map within GDB 
 (gdb) info proc mappings 
+
+
+#Examine the memory 
+(gdb) x/xb 0x80898687   
+(gdb) x/xb &var1 
+(gdb) x/3xb &var2 
+
+
+#GDB Hooking (Execute a set of commands while hitting every brekpoint)
+(gdb) define hook-stop 
+> print/x $eax 
+> print/x $ebx
+> print/x $ecx 
+> x/8xb &sample 
+> disassemble $eip,+10 
+end 
+
+
