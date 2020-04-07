@@ -15,6 +15,9 @@
 (gdb) x/xb 0x80898687   
 (gdb) x/xb &var1 
 (gdb) x/3xb &var2 
+(gdb) x/8xb $esp 
+(gdb) x/4xh $esp 
+(gdb) x/2xw $esp 
 
 
 #GDB Hooking (Execute a set of commands while hitting every brekpoint)
@@ -22,8 +25,22 @@
 > print/x $eax 
 > print/x $ebx
 > print/x $ecx 
+> print $eflags
 > x/8xb &sample 
 > disassemble $eip,+10 
 end 
+
+#list defined variables 
+(gdb) info variables
+
+
+#display command to set up register values after hitting the breakpoint everytime 
+(gdb) display/x $edx 
+(gdb) display/x $eax 
+(gdb) display/x $ebx 
+(gdb) display/x $eflags 
+
+
+
 
 
