@@ -7,4 +7,5 @@
 #Change the syntax display mode of gdb(temporary)
 (gdb) set disassembly-flavor intel 
 
-
+#Process map within GDB 
+(gdb) info proc mappings 
