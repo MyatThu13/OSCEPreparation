@@ -1,4 +1,4 @@
 #Show all general purpose registers (including FPU/MMX/XMM registers)
-(gdb) display /x $eax 
+`(gdb) display /x $eax`
 
 
