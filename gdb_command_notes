@@ -1,4 +1,10 @@
 #Show all general purpose registers (including FPU/MMX/XMM registers)
-`(gdb) display /x $eax`
+(gdb) info all-registers
+
+#Display the content inside a register ($eax or $ah or $ax)
+(gdb) display /x $eax
+
+#Change the syntax display mode of gdb(temporary)
+(gdb) set disassembly-flavor intel 
 
 
