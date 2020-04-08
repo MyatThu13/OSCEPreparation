@@ -18,6 +18,7 @@
 (gdb) x/8xb $esp 
 (gdb) x/4xh $esp 
 (gdb) x/2xw $esp 
+(gdb) x/20i 0x7c87534d (print 20 assembly instructions starting at listed address)
 
 
 #GDB Hooking (Execute a set of commands while hitting every brekpoint)
