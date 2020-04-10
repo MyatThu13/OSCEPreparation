@@ -1,1 +1,16 @@
+### automatically saves workspaces
+winddbg -QY basic_vuln.exe c:\class\crash_file 
 
+K (display stack backtrace information)
+p (step over)
+t (step into)
+
+### masm evaluation mode
+? (evaluation)
+e.g  ?esp 
+     ?esp+100
+     ?esp+ecx+100  
+  
+### Inspect arbitrary memory 
+dd esp 
+dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value)
