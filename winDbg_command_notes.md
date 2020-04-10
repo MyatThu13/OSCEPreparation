@@ -1,9 +1,10 @@
 ### automatically saves workspaces
 winddbg -QY basic_vuln.exe c:\class\crash_file 
 
-K (display stack backtrace information)
-p (step over)
-t (step into)
+<p>K (display stack backtrace information)   <br>
+p (step over) <br>
+t (step into) <br>
+</p>
 
 ### masm evaluation mode
 <p>? (evaluation)<br>
