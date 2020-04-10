@@ -11,6 +11,7 @@ e.g  ?esp <br>
      ?esp+100 <br>
      ?esp+ecx+100  <br> 
 </p>
+
 ### Inspect arbitrary memory 
 <p>dd esp <br> 
 dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value) <br>
