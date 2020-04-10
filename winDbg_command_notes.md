@@ -6,11 +6,11 @@ p (step over)
 t (step into)
 
 ### masm evaluation mode
-? (evaluation)
+<p>? (evaluation)
 e.g  ?esp 
      ?esp+100
      ?esp+ecx+100  
-  
+</p>
 ### Inspect arbitrary memory 
 dd esp 
 dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value)
