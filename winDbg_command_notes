@@ -35,5 +35,32 @@ d fs:[0]
 !exploitable 
 
 
+### byagugan.dll, injectsu.dll & detoured.dll 
+!load byakugan 
 
+Byakugan.dll contains 
+1.jutsu : set of tools to track buffers in memory, determining what is controlled at crash time, and discover valid return addresses
+2.pattern_offset
+3.mushishi : framework for anti-debugging detection and defeating anti-debugging techniques
+4.tenketsu : vista heap emulator/visualizer
+
+The justsu components contains the following functions 
+identBuf / listBuf / rmBuf : find buffers (plain ascii, metasploit patterns, or data from file) in memory…
+memDiff                    : compare data in memory with a pattern and mark the changes. 
+                             This will help you determining whether e.g. shellcode has been changed/corrupted in memory, 
+                             whether certain ‘bad characters’ need to be excluded from shellcode, etc
+findReturn                 : search for the addresses that point to a usable function to return to.
+searchOpcode               : converts assembler instruction to opcode, AND it lists all executable opcode sequence addresses at the same time.
+searchVtptr
+trackVal
+hunt
+
+### Find the metasploit pattern
+!pattern_offset 1000
+
+### List of executable modules 
+lm 
+
+### Disassemble at specific address 
+u 0x640246f7
 
