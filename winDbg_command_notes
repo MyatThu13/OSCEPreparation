@@ -11,10 +11,29 @@ t (step into)
 e.g  ?esp 
      ?esp+100 
      ?esp+ecx+100  
-</p>
+
 
 ### Inspect arbitrary memory 
 dd esp 
-dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value) <br>
+dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value) 
+
+
+### Search the area for the opcode 
+s 00400000 l 0040c000 64 A1        ( 64 A1 is opcode of this instruction - mov DWORD ptr from FS:[0] )
+
+### Dump TEB block 
+d fs:[0] 
+
+### Perform Exception Analysis 
+!analyze -v
+
+### Examine the Exception Chain 
+!exchain
+
+### MSEC.dll load and check exploitable or not 
+!load winext\msec.dll 
+!exploitable 
+
+
 
 
