@@ -12,9 +12,10 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 malloc(),realloc(),free(),unlink(),free() <br> 
  
 ### Chunk Structure  
-<pre>Chunk ->  Prev_Size (4bytes)  <br>
-             Size      (4bytes)  <br>
-   Mem   ->  Data                <br>
+<pre>
+Chunk ->  Prev_Size (4bytes)  <br>
+          Size      (4bytes)  <br>
+Mem   ->  Data                <br>
 </pre>
 
 ### Adjacent Chunks in Memory 
@@ -32,11 +33,12 @@ size - **contains size of the current chunk** <br>
 
 
 ### Freed Chunk Structure
-<p>Chunk ->  Prev_Size (4bytes)  <br>
-             Size      (4bytes)  <br>
-             Forward Pointer(4bytes) <br>
-             Backward Pointer(4bytes) <br>
-   Mem   ->  Old Data                <br>
+<pre>
+ Chunk ->  Prev_Size (4bytes)       <br>
+           Size      (4bytes)      <br>
+           Forward Pointer (4bytes) <br>
+           Backward Pointer(4bytes) <br>
+ Mem   ->  Old Data                 <br>
 </p>
  When free is called, free() check PREVI_INUSE bit of the chunk to be freed to see if the current chunk and prior chunkk can be combined<br>
  fd and bd point into a doubly linked free list. 
