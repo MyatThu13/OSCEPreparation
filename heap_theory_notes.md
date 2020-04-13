@@ -13,7 +13,7 @@ malloc(),realloc(),free(),unlink(),free() <br>
  
 ### Chunk Structure  
 <p>Chunk ->  Prev_Size (4bytes)  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size      (4bytes)  <br>
+8&nbsp; Size      (4bytes)  <br>
    Mem   ->  Data                <br>
 </p>
 
