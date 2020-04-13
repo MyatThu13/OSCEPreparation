@@ -69,6 +69,28 @@ Because the coalesced chunk's size may be different or greater or smaller than t
   /* Now,After unlinking
   FD -> bk = BK; /* FD chunk's backward pointer points to BK chunk. 
   BK -> fd = FD; /* BK chunk's forward pointer points to FD chunk. 
+}
+</pre>
+
+### Unlink() with checks 
+<pre>
+;P  current chunk 
+;FD forward pointer chunk 
+;BK backward pointer chunk 
+;fd forward pointer 
+;bk backward pointer 
+
+#define unlink(P,BK,FD){ 
+  FD = P -> fd;  /* current chunk's forward pointer points to FD chunk.
+  BK = P -> bk;  /* current chunk's backward pointer points to BK chunk. 
+  
+  if(builtin_expect( FD -> bk != P || BK -> fd != P,0)){
+    malloc_print(check_action,"corrupted double-linked list")
+  } 
+  else {
+    FD -> bk = BK; /* FD chunk's backward pointer points to BK chunk. 
+    BK -> fd = FD; /* BK chunk's forward pointer points to FD chunk. 
+}
 </pre>
 
 
