@@ -12,10 +12,10 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 malloc(),realloc(),free(),unlink(),free() <br> 
  
 ### Chunk Structure  
-<p>Chunk ->  Prev_Size (4bytes)  <br>
-8&nbsp; Size      (4bytes)  <br>
+<pre>Chunk ->  Prev_Size (4bytes)  <br>
+             Size      (4bytes)  <br>
    Mem   ->  Data                <br>
-</p>
+</pre>
 
 ### Adjacent Chunks in Memory 
 Prev_Size Size Data Prev_Size Size Data <br>
