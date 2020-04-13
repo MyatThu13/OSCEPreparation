@@ -51,8 +51,8 @@ frontlink() inserts new chunks into a doubly linked free list
 unlink() is called by free() when an adjacent chunk is also unused 
 </pre>
 **Analogy** - a group of individuals holding hands(.i.e 10 people are holding hands, creating a linked circle) <br>
-**After coalescing, the coalesced chunk may no longer point to the old chunk due to size indexing in the bins.
-Because the coalesced chunk size may greater than the old chunk's size.** 
+After coalescing, **the coalesced chunk may no longer point to the old chunk due to size indexing in the bins.** <br>
+Because the coalesced chunk's size may be different or greater or smaller than the old chunk's size.
 
 
 
