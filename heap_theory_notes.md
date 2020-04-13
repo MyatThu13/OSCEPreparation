@@ -9,7 +9,7 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 </p>
 
 ### Doug Lea's malloc (dlmalloc) implementation 
-<p> malloc(),realloc(),free(),unlink(),free() <br> </p>
+malloc(),realloc(),free(),unlink(),free() <br> 
  
 ### Chunk Structure  
 <p>Chunk ->  Prev_Size (4bytes)  <br>
