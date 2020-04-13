@@ -21,9 +21,9 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 <p>
 Prev_Size Size Data Prev_Size Size Data <br>
 <-----Chunk 1-----> <----Chunk 2------> <br>
-
+ </p>
 **general rule-no two free chunks shoud exist side-by-side in memory withoud being coalesced** <br>
-prev_size <br>
+<p>prev_size <br>
 size - **contains size of the current chunk** <br>
         lowest 3 bits used as flags <br>
         lowest bit- **PREV_INUSE(previous chunk is in use) bit** <br>
