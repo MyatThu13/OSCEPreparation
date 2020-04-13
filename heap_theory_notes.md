@@ -8,6 +8,15 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 **calloc()** - initializes data as all zero's (specify an array of N elements(number of chunks),each with a defined size. 
 </p>
 
+### Doug Lea's malloc (dlmalloc) implementation 
+<p> malloc(),realloc(),free(),unlink(),free() <br>
+ 
+#### Chunk Structure  
+   Chunk ->  Prev_Size (4bytes)  <br>
+             Size      (4bytes)  <br>
+   Mem   ->  Data                <br>
+   
+   
 
 
 
