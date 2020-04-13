@@ -18,12 +18,12 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 </p>
 
 ### Adjacent Chunks in Memory 
-Prev_Size Size Data Prev_Size Size Data 
+Prev_Size Size Data Prev_Size Size Data <br>
 <-----Chunk 1-----> <----Chunk 2------> <br>
 
 **general rule-no two free chunks shoud exist side-by-side in memory withoud being coalesced** <br>
-<p>prev_size <br>
-size - **contains size of the current chunk** <br>
+prev_size <br>
+<p>size - **contains size of the current chunk** <br>
         lowest 3 bits used as flags <br>
         lowest bit- **PREV_INUSE(previous chunk is in use) bit** <br>
         zero - the previous chunk is not in use <br>
