@@ -105,8 +105,7 @@ fastbins - never merged,singly linked , only fd pointer , security issue and can
 
 Wilderness - ummapped memory area between stack and heap 
              top most chunk(the chunk that can increase the size of the heap) 
-             
-
+</pre>             
 
 
 
