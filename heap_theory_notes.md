@@ -93,7 +93,19 @@ Because the coalesced chunk's size may be different or greater or smaller than t
 }
 </pre>
 
+### Bins,Fasstbins & wilderness chunk 
+<pre>
+linked list are kept in bins.
+total 128 bins,sorted by size 
+less than 512 bytes (small bins)
+greater than 512 bytes (larger bins)
 
+80 bytes bins (Fastbins)
+fastbins - never merged,singly linked , only fd pointer , security issue and can exploit 
+
+Wilderness - ummapped memory area between stack and heap 
+             top most chunk(the chunk that can increase the size of the heap) 
+             
 
 
 
