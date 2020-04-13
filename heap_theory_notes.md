@@ -11,14 +11,27 @@ primary purpose of these funcs - divide up the memory allocated by brk(),sbrk() 
 ### Doug Lea's malloc (dlmalloc) implementation 
 <p> malloc(),realloc(),free(),unlink(),free() <br>
  
-#### Chunk Structure  
-   Chunk ->  Prev_Size (4bytes)  <br>
+### Chunk Structure  
+<p>Chunk ->  Prev_Size (4bytes)  <br>
              Size      (4bytes)  <br>
    Mem   ->  Data                <br>
-   
-   
+</p>
 
+### Adjacent Chunks in Memory 
+<p>
+Prev_Size Size Data Prev_Size Size Data <br>
+<-----Chunk 1-----> <----Chunk 2------> <br>
 
+**general rule-no two free chunks shoud exist side-by-side in memory withoud being coalesced** <br>
+prev_size <br>
+size - **contains size of the current chunk** <br>
+        lowest 3 bits used as flags <br>
+        lowest bit- **PREV_INUSE(previous chunk is in use) bit** <br>
+        zero - the previous chunk is not in use <br>
+        one - the previous chunk is in use <br>
+        
+Mem - **memory address of where data starts within the chunk**  <br>
+</p>
 
 
 
