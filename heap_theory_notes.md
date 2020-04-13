@@ -44,6 +44,15 @@ size -  contains size of the current chunk<br>
  When free is called, free() check PREVI_INUSE bit of the chunk to be freed to see if the current chunk and prior chunkk can be combined<br>
  fd and bd point into a doubly linked free list. 
  
+### unlink() & frontlink() 
+<pre>
+unlink() removes chunks from a doubly linked free list
+frontlink() inserts new chunks into a doubly linked free list 
+unlink() is called by free() when an adjacent chunk is also unused 
+</pre>
+**Analogy** - a group of individuals holding hands(.i.e 10 people are holding hands, creating a linked circle) <br>
+**After coalescing, the coalesced chunk may no longer point to the old chunk due to size indexing in the bins.
+Because the coalesced chunk size may greater than the old chunk's size.** 
 
 
 
