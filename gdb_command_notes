@@ -44,7 +44,8 @@ end
 (gdb) display/x $ebx 
 (gdb) display/x $eflags 
 
-
+#Calculate the distacn between two address range 
+print/x 0xbffff947 - 0xbfffd56
 
 
 
