@@ -19,4 +19,7 @@ Used when PIE(position independent executable) is on. It doesn't randomize progr
 
 ### Ret2Sys Attack 
 <pre>
+buffer  SFP   RET==system() 4-byte_PADD(exit_function_address)  ARG_to_systme()
+
+4-byte_PADD will be the return address when system() function finished execution.
 </pre>
