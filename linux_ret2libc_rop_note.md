@@ -23,3 +23,17 @@ buffer  SFP   RET==system() 4-byte_PADD(exit_function_address)  ARG_to_system()
 
 4-byte_PADD will be the return address when system() function finished execution.
 </pre>
+
+### Chained Libc Attack 
+<pre> 
+buffer SFP RET==first_system() RP_of_first_system() first_arg_system  second_system() RP_of_second_system() second_arg_sytem 
+
+#The RP of first and system function must be pop some value from the stack in order to align the esp pointer. 
+e.g  POP EBP, retn 
+Then, you can chain the sequence as you like. To end the chain, the last RP value can be exit() function. 
+</pre>
+
+
+
+
+
