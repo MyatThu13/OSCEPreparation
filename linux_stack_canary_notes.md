@@ -9,7 +9,6 @@ Stack Smashing Protect(ProPolice) - default in later versions of gcc
                                   - place a random  canary to protect <b>RP & SFP</b>
                                   - also reoders local variables,protecting them from common attacks.
                                   - urandom doesn't strong? -> reverts back to using a terminator canary. 
-
 <h3>Type of canaries</h3>
 Terminator canary - <b>0x00000aff & 0x000aff0d</b>
                   - 0x00 bad char for strcpy() & 0x0a bad char for gets()
