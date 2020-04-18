@@ -11,7 +11,6 @@ Stack Smashing Protect(ProPolice) - default in later versions of gcc
                                   - urandom doesn't strong? -> reverts back to using a terminator canary. 
 
 <b>Type of canaries</b>
-
 Terminator canary - <b>0x00000aff & 0x000aff0d</b>
                   - 0x00 bad char for strcpy() & 0x0a bad char for gets()
 Random canary     - random 4-byte value (/dev/urandom)
