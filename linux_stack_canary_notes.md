@@ -18,6 +18,6 @@ Null Canary       - weakest type of canary, containing all 0s.
 
 
 <b>Notes ***</b> - some stack protectiong protect only RP but do not protect the savaed frame pointer. 
-          <b> - overwrite SFP with a valid address on the stack that we control,followed by terminator canary,followed by our shellcode</b>
-              - and that can hook flow of execution. 
+          <b>- overwrite SFP with a valid address on the stack that we control,followed by terminator canary,followed by our shellcode</b>
+            - and that can hook flow of execution. 
 </pre>
