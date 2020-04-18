@@ -15,4 +15,9 @@ Terminator canary - <b>0x00000aff & 0x000aff0d</b>
                   - 0x00 bad char for strcpy() & 0x0a bad char for gets()
 Random canary     - random 4-byte value (/dev/urandom)
 Null Canary       - weakest type of canary, containing all 0s.
+
+
+<b>Notes ***</b> - some stack protectiong protect only RP but do not protect the savaed frame pointer. 
+          <b>   - overwrite SFP with a valid address on the stack that we control,followed by terminator canary,followed by our shellcode</b>
+             - and that can hook flow of execution. 
 </pre>
