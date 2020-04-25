@@ -7,36 +7,41 @@ t (step into)
 </pre>
 
 ### masm evaluation mode
-? (evaluation)
+<pre>? (evaluation)
 e.g  ?esp 
      ?esp+100 
      ?esp+ecx+100  
-
+</pre>
 
 ### Inspect arbitrary memory 
-dd esp 
+<pre>dd esp 
 dd poi(esp)   (poi works like a pointer, extract the value from esp, and go to that value) 
-
+</pre>
 
 ### Search the area for the opcode 
-s 00400000 l 0040c000 64 A1        ( 64 A1 is opcode of this instruction - mov DWORD ptr from FS:[0] )
+<pre>s 00400000 l 0040c000 64 A1        ( 64 A1 is opcode of this instruction - mov DWORD ptr from FS:[0] )
+</pre>
 
 ### Dump TEB block 
-d fs:[0] 
+<pre>d fs:[0] 
+</pre>
 
 ### Perform Exception Analysis 
-!analyze -v
+<pre>!analyze -v
+</pre>
 
 ### Examine the Exception Chain 
-!exchain
+<pre>!exchain
+</pre>
+
 
 ### MSEC.dll load and check exploitable or not 
-!load winext\msec.dll 
+<pre>!load winext\msec.dll 
 !exploitable 
-
+</pre>
 
 ### byagugan.dll, injectsu.dll & detoured.dll 
-!load byakugan 
+<pre>!load byakugan 
 
 Byakugan.dll contains 
 1.jutsu : set of tools to track buffers in memory, determining what is controlled at crash time, and discover valid return addresses
@@ -54,13 +59,16 @@ searchOpcode               : converts assembler instruction to opcode, AND it li
 searchVtptr
 trackVal
 hunt
+</pre>
 
 ### Find the metasploit pattern
-!pattern_offset 1000
+<pre>!pattern_offset 1000
+</pre>
 
 ### List of executable modules 
-lm 
+<pre>lm 
+</pre>
 
 ### Disassemble at specific address 
-u 0x640246f7
-
+<pre>u 0x640246f7
+</pre>
