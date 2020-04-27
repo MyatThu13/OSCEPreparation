@@ -72,3 +72,24 @@ hunt
 ### Disassemble at specific address 
 <pre>u 0x640246f7
 </pre>
+
+### Switch WinDbg between 32 bits and 64 bit modes 
+<pre>!wow64exts.sw 
+</pre> 
+
+### Symobls 
+<pre>Add a default symbol file path 
+SRV*C:\windbgsymbols*http://msdl.microsoft.com/download/symbols
+
+<b>Append a symbol search path to the default one before debugging</b>
+.sympath+C:\symbol_path 
+
+After appending a symbol path, then reload 
+.reload 
+</pre> 
+
+
+
+
+
+
