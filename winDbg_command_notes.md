@@ -89,6 +89,9 @@ SRV*C:\windbgsymbols*http://msdl.microsoft.com/download/symbols
 <b>Checking Symbols
 See what modules have symbols loaded</b> 
 x *!
+x kernel32!virtual* 
+x *!messagebox* 
+
 </pre> 
 
 
