@@ -65,10 +65,6 @@ hunt
 <pre>!pattern_offset 1000
 </pre>
 
-### List of executable modules 
-<pre>lm 
-</pre>
-
 ### Disassemble at specific address 
 <pre>u 0x640246f7
 </pre>
@@ -114,9 +110,21 @@ dbgsrv.exe -t tcp:port=1234
 
 <b>On Machine B, File -> Connect to Remote Stub and enter this command</b>
 tcp:Port=1234,Server=(IP of Machine A)
+</pre>
 
+### Modules 
+<pre><b>List all loaded modules</b>
+lmf 
 
+<b>List a specific module</b>
+lmf m ntdll 
 
+<b>Get Image header information of a module</b>
+lmf m ntdll 
+!dh ntdll (or) !dh start_address_of_module(77790000) 
+<b>Notes : ! means that this command is an extercommand which is exported from an external DLL and 
+           called inside WinDbg</b>
+</pre>
 
 
 
