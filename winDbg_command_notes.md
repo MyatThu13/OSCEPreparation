@@ -78,14 +78,17 @@ hunt
 </pre> 
 
 ### Symobls 
-<pre>Add a default symbol file path 
+<pre><b>Add a default symbol file path</b>
 SRV*C:\windbgsymbols*http://msdl.microsoft.com/download/symbols
 
 <b>Append a symbol search path to the default one before debugging</b>
 .sympath+C:\symbol_path 
-
-After appending a symbol path, then reload 
+<b>After appending a symbol path, then reload</b>
 .reload 
+
+<b>Checking Symbols
+See what modules have symbols loaded</b> 
+x *!
 </pre> 
 
 
