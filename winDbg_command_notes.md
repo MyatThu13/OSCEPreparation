@@ -89,10 +89,33 @@ SRV*C:\windbgsymbols*http://msdl.microsoft.com/download/symbols
 <b>Checking Symbols
 See what modules have symbols loaded</b> 
 x *!
+
+<b>Search for all symbols in kernel32 whose name starts with virtual</b> 
 x kernel32!virtual* 
+
+Another example 
 x *!messagebox* 
 
+<b>load sybmbols for all modules</b> 
+ld*
 </pre> 
+
+### Remote Debugging
+<pre><b>To debug a program remotely,2 options available
+First, if your are already debugging  a program locally on machine A,tye this command 
+to start debugging server within winDbg</b> 
+.server tcp:port=1234 
+
+<b>Then,on machine B, File -> Connect to Remote Session and enter this command to connect windDbg Server on machine A</b>
+tcp:Port=1234,Server=(IP of Machine A) 
+
+<b>Second Method, On machine A,run dbgsrv to strat a debugging server</b>
+dbgsrv.exe -t tcp:port=1234 
+
+<b>On Machine B, File -> Connect to Remote Stub and enter this command</b>
+tcp:Port=1234,Server=(IP of Machine A)
+
+
 
 
 
